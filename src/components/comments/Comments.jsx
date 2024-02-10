@@ -25,7 +25,8 @@ const Comments = ({ postSlug }) => {
   const { status } = useSession();
 
   const { data, mutate, isLoading } = useSWR(
-    `${url}/api/comments?postSlug=${postSlug}`,
+    // `${url}/api/comments?postSlug=${postSlug}`,
+    `/api/comments?postSlug=${postSlug}`,
     fetcher
   );
 
@@ -74,7 +75,7 @@ const Comments = ({ postSlug }) => {
                   )}
                   <div className={styles.userInfo}>
                     <span className={styles.username}>{item.user.name}</span>
-                    <span className={styles.date}>{item.createdAt}</span>
+                    <span className={styles.date}>{item?.createdAt.substring(0, 10)} {" "}</span>
                   </div>
                 </div>
                 <p className={styles.desc}>{item.desc}</p>

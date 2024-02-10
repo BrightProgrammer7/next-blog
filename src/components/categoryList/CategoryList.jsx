@@ -2,7 +2,7 @@ import React from "react";
 import styles from "./categoryList.module.css";
 import Link from "next/link";
 import Image from "next/image";
-const url = process.env.NEXTAUTH_URL
+const url = process.env.NEXTAUTH_URL;
 
 // console.log(url)
 const getData = async () => {
@@ -25,8 +25,7 @@ const CategoryList = async () => {
       <div className={styles.categories}>
         {data?.map((item) => (
           <Link
-            href={`/blog?cat=${item.
-              title}`}
+            href={`/blog?cat=${item.title}`}
             className={`${styles.category} ${styles[item.slug]}`}
             key={item._id}
           >
