@@ -4,9 +4,10 @@ import Pagination from "../pagination/Pagination";
 import Image from "next/image";
 import Card from "../card/Card";
 
+const url = process.env.NEXTAUTH_URL
 const getData = async (page, cat) => {
   const res = await fetch(
-    `api/posts?page=${page}&cat=${cat || ""}`,
+    `${url}/api/posts?page=${page}&cat=${cat || ""}`,
     {
       cache: "no-store",
     }
