@@ -6,9 +6,10 @@ import Image from "next/image";
 import useSWR from "swr";
 import { useSession } from "next-auth/react";
 import { useState } from "react";
-const url = process.env.NEXTAUTH_URL
-const fetcher = async (url) => {
-  const res = await fetch(url);
+const url = process.env.NEXTAUTH_URL;
+
+const fetcher = async (api) => {
+  const res = await fetch(api);
 
   const data = await res.json();
 
@@ -31,7 +32,8 @@ const Comments = ({ postSlug }) => {
   const [desc, setDesc] = useState("");
 
   const handleSubmit = async () => {
-    await fetch("/api/comments", {
+    await fetch(`/api/comments`, {
+    // await fetch(`${url}/api/comments`, {
       method: "POST",
       body: JSON.stringify({ desc, postSlug }),
     });
@@ -50,7 +52,6 @@ const Comments = ({ postSlug }) => {
           />
           <button className={styles.button} onClick={handleSubmit}>
             Send
-            
           </button>
         </div>
       ) : (
