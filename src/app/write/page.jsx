@@ -15,11 +15,12 @@ import {
 import { app } from "@/utils/firebase";
 // import ReactQuill from "react-quill";
 import dynamic from 'next/dynamic'
+const url = process.env.NEXTAUTH_URL
+const ReactQuill = dynamic(() => import("react-quill"), { ssr: false });
 
 const WritePage = () => {
   const { status } = useSession();
   const router = useRouter();
-  const ReactQuill = dynamic(() => import("react-quill"), { ssr: false });
   const [open, setOpen] = useState(false);
   const [file, setFile] = useState(null);
   const [media, setMedia] = useState("");
@@ -79,7 +80,8 @@ const WritePage = () => {
       .replace(/^-+|-+$/g, "");
 
   const handleSubmit = async () => {
-    const res = await fetch("/api/posts", {
+    // const res = await fetch(`${url}/api/posts`, {
+    const res = await fetch(`/api/posts`, {
       method: "POST",
       body: JSON.stringify({
         title,
@@ -105,8 +107,8 @@ const WritePage = () => {
         onChange={(e) => setTitle(e.target.value)}
       />
         {media && ( <div className={styles.imageContainer}>
-        {/* <Image src={media} alt="media" width={150} height={150} className={styles.image}/> */}
-        <Image src={media} alt="media" fill className={styles.image}/>
+        <Image src={media} alt="media" width={150} height={150} className={styles.image}/>
+        {/* <Image src={media} alt="media" fill className={styles.image}/> */}
         </div>)
         }
 
