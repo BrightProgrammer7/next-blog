@@ -50,6 +50,7 @@ const Comments = ({ postSlug }) => {
           />
           <button className={styles.button} onClick={handleSubmit}>
             Send
+            
           </button>
         </div>
       ) : (
