@@ -104,6 +104,12 @@ const WritePage = () => {
         className={styles.input}
         onChange={(e) => setTitle(e.target.value)}
       />
+        {media && ( <div className={styles.imageContainer}>
+        {/* <Image src={media} alt="media" width={150} height={150} className={styles.image}/> */}
+        <Image src={media} alt="media" fill className={styles.image}/>
+        </div>)
+        }
+
       <select
         className={styles.select}
         onChange={(e) => setCatSlug(e.target.value)}
@@ -140,7 +146,6 @@ const WritePage = () => {
             </button>
           </div>
         )}
-        {media && <Image src={media} alt="media" width={16} height={16} />}
 
         <ReactQuill
           className={styles.textArea}
