@@ -10,7 +10,7 @@ const Featured = () => {
         <b>Salam, everyone 😉!</b> Discover events, traineeships, competitions, conferences, recruitments, and hackathons..</h1>
       <div className={styles.post}>
         <div className={styles.imgContainer}>
-          <Image src="/icon.jpeg" alt="nei" fill className={styles.image} />
+          <Image src="/icon.png" alt="nei" fill className={styles.image} />
         </div>
         <div className={styles.textContainer}>
           <h1 className={styles.postTitle}>New Events Info</h1>
