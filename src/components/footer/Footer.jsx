@@ -8,7 +8,7 @@ const Footer = () => {
     <div className={styles.container}>
       <div className={styles.info}>
         <div className={styles.logo}>
-          <Image src="/logo.png" alt="lama blog" width={50} height={50} />
+          <Image src="/icon.png" alt="nei" width={50} height={50} />
           <h1 className={styles.logoText}>NewEventsInfo</h1>
         </div>
         <p className={styles.desc}>
@@ -25,16 +25,16 @@ const Footer = () => {
         <div className={styles.list}>
           <span className={styles.listTitle}>Links</span>
           <Link href="/">Homepage</Link>
-          <Link href="/">Blog</Link>
+          <Link href="/">Events</Link>
           <Link href="/">About</Link>
           <Link href="/">Contact</Link>
-        </div>
+        </div> 
         <div className={styles.list}>
           <span className={styles.listTitle}>Tags</span>
-          <Link href="/">Style</Link>
-          <Link href="/">Fashion</Link>
-          <Link href="/">Coding</Link>
-          <Link href="/">Travel</Link>
+          <Link href="/">Traineeships</Link>
+          <Link href="/">Conferences</Link>
+          <Link href="/">Recruitments</Link>
+          <Link href="/">Hackathons</Link>
         </div>
         <div className={styles.list}>
           <span className={styles.listTitle}>Social</span>

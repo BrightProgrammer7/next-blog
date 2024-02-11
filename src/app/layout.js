@@ -10,7 +10,16 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
   title: "New Events Info",
-  description: "The best blog app!",
+  description: "The best events news app!",
+  icons: {
+    icon: '/icon.png',
+    shortcut: '/shortcut-icon.png',
+    apple: '/apple-icon.png',
+    other: {
+      rel: 'apple-touch-icon-precomposed',
+      url: '/apple-touch-icon-precomposed.png',
+    },
+  },
 };
 
 export default function RootLayout({ children }) {
