@@ -23,10 +23,10 @@ export const metadata: Metadata = {
   title: 'Loading Studio…',
 }
 
-let Viewport;
-export const viewport: Viewport = {
-  ...studioViewport,
-  // Overrides the viewport to resize behavior
-  interactiveWidget: 'resizes-content',
-}
+// let Viewport;
+// export const viewport: Viewport = {
+//   ...studioViewport,
+//   // Overrides the viewport to resize behavior
+//   interactiveWidget: 'resizes-content',
+// }
 

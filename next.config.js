@@ -8,7 +8,7 @@
 
 module.exports = {
   images: {
-    domains: ["lh3.googleusercontent.com", "firebasestorage.googleapis.com"],
+    domains: ["lh3.googleusercontent.com", "firebasestorage.googleapis.com", "links.papareact.com", "cdn.sanity.io"],
   },
   reactScriptMode: true,
   experimental: {
