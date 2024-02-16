@@ -1,6 +1,8 @@
-import Banner from "../../components/Banner";
-import Header from "../../components/Header";
-import "../../styles/globals.css";
+import Banner from "@/components/studio/Banner";
+import Header from "@/components/studio/Header";
+import "@/app/globals.css";
+import Footer from "@/components/studio/Footer";
+import Navbar from "@/components/studio/Navbar";
 
 export const metadata = {
   title: "GLad Blog",
@@ -15,9 +17,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className="max-w-7xl mx-auto">
+      <Navbar />
         <Header />
         <Banner />
         {children}
+        <Footer />
       </body>
     </html>
   );

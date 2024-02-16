@@ -34,3 +34,5 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 .history/
+
+NODE_TLS_REJECT_UNAUTHORIZED="0"
